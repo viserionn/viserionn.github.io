@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <title>OLA-VELOCIDADE</title>
-    <?php 
-
-echo("hello");?>
-  </head>
-  <body><marquee scrolldelay="1" truespeed="">Olá VELOCIDADE!</marquee></body>
+   </head>
+  <body> <?php 
+echo "
+<marquee scrolldelay="1" truespeed="">Olá VELOCIDADE!</marquee>
+"; 
+?>
+  </body>
 </html>
