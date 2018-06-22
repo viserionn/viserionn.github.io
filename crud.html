@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>CRUD</title>
+  <style type="text/css">
+    #nome{
+      font-style: monospace;
+    }
+    .cor{
+      background-color: rgba(0,0,0,0.75);
+      color: rgba(255,255,0,0.8);
+    }
+    .centraliza{
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    }
+    a{
+      color: black;
+      text-decoration: none;
+    }
+    button{
+      color:white;
+    }
+    button:hover{
+      color: red;
+    }
+  </style>
+</head>
+<body class="cor">  
+  <div class="centraliza">   
+    <center>
+      <div>
+  <span style="background-color: black;">nome</span>      
+      <input type="text" id="nome" onkeypress="adicionarViaEnter(event)" placeholder="Nome" />    
+       <button type="button" 
+               onclick="adicionar()">Salvar</button>    
+      <ol id="listaDeImpressao"></ol>  
+      </div>  
+      <script type="text/javascript">        
+          var listaDeNomes = [];
+          var indice = null;        
+          var listaDeImpressao = document.getElementById('listaDeImpressao');
+          var valorDoInput = document.getElementById('nome');
+          function adicionar(){
+            if(valorDoInput.value != ''){
+              document.body.style.backgroundColor = valorDoInput.value;
+                if(indice == null){
+                 listaDeNomes.push(valorDoInput.value); 
+                }else{
+                  listaDeNomes[indice] = valorDoInput.value;
+                }
+              impressao();
+              valorDoInput.value = '';  
+            }          
+          }
+          function limpar(){
+            listaDeImpressao.innerHTML = '';
+            indice  = null;
+          }
+          function adicionarViaEnter(event){
+            if(event.keyCode == 13){
+              adicionar();
+            }
+          }
+          function remover(idx){          
+            listaDeNomes.splice(idx, 1);
+            impressao();
+          }
+          function editar(idx){
+            indice  = idx;
+            valorDoInput.value = listaDeNomes[idx];
+          }
+          function impressao(){
+            limpar();
+            listaDeNomes.forEach(function(item, idx){
+              listaDeImpressao.innerHTML = listaDeImpressao.innerHTML +  '<li>' + 
+                    '<a href="javascript:void(0)" ondblclick="remover(\'' + idx + '\')" onclick="editar(\'' + idx + '\')">' + item + '</a>' +
+                  '</li>';
+            });  
+          }        
+      </script>
+    </center>
+    </div>
+  </body>
+</body>
+</html>
