@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <title>OLA-VELOCIDADE</title>
    </head>
-  <body> <?php 
-echo "<marquee scrolldelay='1' truespeed=''>Olá VELOCIDADE!</marquee>"; 
-?>
+  <body> <marquee scrolldelay='1' truespeed=''>Olá VELOCIDADE!</marquee>
   </body>
 </html>
