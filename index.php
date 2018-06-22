@@ -7,9 +7,7 @@
     <title>OLA-VELOCIDADE</title>
    </head>
   <body> <?php 
-echo "
-<marquee scrolldelay="1" truespeed="">Olá VELOCIDADE!</marquee>
-"; 
+echo "<marquee scrolldelay='1' truespeed=''>Olá VELOCIDADE!</marquee>"; 
 ?>
   </body>
 </html>
