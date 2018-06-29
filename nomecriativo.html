@@ -74,5 +74,17 @@
 	  		};
 	  	</script>
   	</div>
+	  <p id="demo"></p>
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    var completo = null;
+    completo = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+    document.getElementById("demo").innerHTML = completo;
+}
+</script>
   </body>
 </html>
