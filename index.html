@@ -40,15 +40,22 @@
   		</section>
   	</main>
   	<footer>
-		<p id="eunaocopieidow3scholl"></p>
-		<script>
-		var myVar = setInterval(myTimer, 1000);
+		<p id="demo"></p>
 
 		function myTimer() {
 		    var d = new Date)(;
 		    document.getElementById("eunaocopieidow3scholl").innerHTML = d;
 		}
 		</script>
+<script>
+var myVar = setInterval(myTimer, 1000);
+function myTimer() {
+    var d = new Date();
+    var completo = null;
+    completo = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+    document.getElementById("demo").innerHTML = completo;
+}
+</script>
   	</footer>
   </body>
  </html>
