@@ -1,7 +1,9 @@
 body{
 	margin: 0px;
-	background-color: #2b2323;
+	background-color: red;
 	font-family: monospace;
 	text-align: center;
-	color: #b4b4b4;
+	color: red;
+}body:hover{
+	background-color: #2b2323;
 }
