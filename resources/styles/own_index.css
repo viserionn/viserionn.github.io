@@ -53,4 +53,9 @@ header .sub-current-role {
 .companies img {
 	margin: 10px;
 	height: 25px;
+}.vermelho{
+	color:red;
+	}
+.preto{
+	color:black;
 }
